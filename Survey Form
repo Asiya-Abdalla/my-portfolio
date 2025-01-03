@@ -1,0 +1,111 @@
+survey_Form.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta chardet="UTF-8">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css"/>
+  </head>
+
+    <body>
+  <h1 id="title">Alpha Cosmetics Survey Form</h1>
+
+  <form action="https://jsonplaceholder.typicode.com/posts" method="post">
+
+  <p id="description">Please fill out this form with the required information to help us improve our products</p>
+    <fieldset>
+        <label for="name">Enter Your Name: <input id="name" type="text" required /></label><br><br>
+        <label for="email">Enter Your Email: <input id="email" type="email" required /></label><br><br>
+        <label for="age">Age: <input type="number" id="age" min="0" required /></label><br><br>
+        <label for="current-role">What Best Describes Your Current Role? <select id="current-role" name="current-role">
+            <option value="">(select current role)</option> 
+            <option value="1">Student</option>
+            <option value="2">Full Time Job</option>
+            <option value="3">Full Time Learner</option>
+            <option value="4">Prefer not to say </option>
+            <option value="5">Other</option>
+        </select></label>
+    </fieldset>
+
+    <fieldset>
+        <p>Would You Recommend Us To a Friend? </p>
+        <input type="radio" id="yes" name="recommend" value="yes" required checked>
+        <label for="yes">Yes</label><br><br>
+
+        <input type="radio" id="maybe" name="recommend" value="maybe">
+        <label for="maybe">Maybe</label><br><br>
+
+        <input type="radio" id="no" name="recommend" value="no">
+        <label for="no">No</label><br><br>
+
+    </fieldset>
+
+    <fieldset>
+        <p>Which of our new products to you enjoy the most?</p>
+
+        <label for="foundation"><input type="checkbox" id="foundation" name="products" value="product1" /> Liquid Touch Weightless Foundation</label><br>
+        <label for="blush"><input type="checkbox" id="blush" name="products" value="product2"/> Soft Pinch Liquid Blush</label><br>
+        <label for="concealer"><input type="checkbox" id="concealer" name="products" value="product3"/> Liquid Touch Brightening Concealer</label><br>
+        <label for="luminizer"><input type="checkbox" id="luminizer" name="products" value="product4"/> Positive Light Liquid Luminizer</label><br>
+        <label for="duo"><input type="checkbox" id="duo" name="products" value="product5"/> Blush & Highlighter Duo</label><br>
+    </fieldset>
+
+    <fieldset>
+        <label for="comments or suggestions">Any comments or suggestions? <textarea id="comments or suggestions" name="comments or suggestions" rows="3" cols="30"
+            placeholder="I would suggest..."></textarea></label><br><br>
+           <label><input class="submit" type="submit" value="submit"/></label> 
+    </fieldset>
+
+   </form>
+  </body>
+</html>
+
+#styles.css
+
+body {
+   background-image:url(https://images.ctfassets.net/u4vv676b8z52/3OYeHyRL4qz1LzLjxW0bWC/2cdea093cb11c18f0960cee4fb2361e4/eye-makeup-678x446.gif?fm=jpg&q=80);
+   font-family: "Snell Roundhand", cursive;
+}
+    
+ 
+
+ h1 {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+ }
+
+ fieldset {
+   border: none;
+   padding: 2rem 0;
+   border-bottom: 3px solid rgb(246, 96, 126);
+}
+ fieldset :last-of-type{
+   border-bottom: none;
+ }
+
+ form{
+   background-color:rgb(255, 202, 202);
+   color: black;
+   margin-left:auto;
+   margin-right: auto;
+   padding: 20px;
+   max-width: 500px;
+   font-family:Arial, Helvetica, sans-serif ;
+ }
+
+ textarea:last-of-type{
+   margin: 10px 0 0 0;
+   width: 100%;
+ }
+
+.submit{
+   margin: 10px 0 0 0;
+   width: 100%;
+}
+
+
+
+ 
+ 
+ 
